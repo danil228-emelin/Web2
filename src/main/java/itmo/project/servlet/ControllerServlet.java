@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/web-jsp")
+@WebServlet("")
 public class ControllerServlet extends HttpServlet {
     private final String ERROR_DIGIT = "Value must be digit .Has ";
     private final String ERROR_X = "X must be in range [-3;5]";

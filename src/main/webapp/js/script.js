@@ -112,7 +112,7 @@ buttons.forEach((b) => {
     });
 });
 
-SEND_BUTTON.addEventListener("click", async onfulfilled => {
+SEND_BUTTON.addEventListener("click", async () => {
     if (r === null) {
         alert("Fill parameter r");
         return;
