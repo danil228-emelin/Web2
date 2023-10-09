@@ -1,7 +1,16 @@
 package itmo.project.bean;
 
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-public record Entry(double x, double y, double r, String currentTime, String responseTime,
-                    boolean inRange) implements Serializable {
+import java.io.Serializable;
+@Data
+@AllArgsConstructor
+public class Entry implements Serializable {
+    private double x;
+    private double y;
+    private double r;
+    private String currentTime;
+    private String responseTime;
+    private boolean inRange;
 }

@@ -13,10 +13,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-@WebServlet("/checkServlet")
+@WebServlet("/areaCheck")
 public class AreaCheckServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("In AreaCheckServlet get request");
+
         final long startTime = System.nanoTime();
         var x = Double.parseDouble(request.getHeader("x"));
         var y = Double.parseDouble(request.getHeader("y"));
@@ -31,7 +33,7 @@ public class AreaCheckServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         String executionTime = String.valueOf((System.nanoTime() - startTime));
         entries.add(Optional.of(new Entry(x, y, r, currentTime, executionTime, result)));
-        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/template.jsp").forward(request, response);
     }
 
     private boolean isInRange(double x, double y, double r) {

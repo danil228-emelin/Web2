@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("")
+@WebServlet("/web-jsp")
 public class ControllerServlet extends HttpServlet {
     private final String ERROR_DIGIT = "Value must be digit .Has ";
     private final String ERROR_X = "X must be in range [-3;5]";
@@ -18,11 +18,12 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("In controllerServlet get request");
         var x = request.getHeader("x");
         var y = request.getHeader("y");
         var r = request.getHeader("r");
         if (x == null && y == null && r == null) {
-            var dispatcher = request.getRequestDispatcher("/index.jsp");
+            var dispatcher = request.getRequestDispatcher("/template.jsp");
             dispatcher.forward(request, response);
             return;
         }

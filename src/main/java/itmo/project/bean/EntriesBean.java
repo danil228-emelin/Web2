@@ -5,19 +5,28 @@ import java.util.List;
 import java.util.Optional;
 
 public class EntriesBean<T> {
-    private final List<T> ENTRY_LIST;
+    private  List<T> entryList;
 
     public EntriesBean() {
-        ENTRY_LIST = new ArrayList<>();
+        System.out.println("EntriesBean initialized");
+
+        entryList = new ArrayList<>();
     }
 
     public EntriesBean(List<T> list) {
 
-        ENTRY_LIST = list;
+        entryList = list;
     }
 
     public void add(Optional<T> element) {
-
-        element.ifPresent(ENTRY_LIST::add);
+        System.out.println("Add element in EntriesBean");
+        element.ifPresent(entryList::add);
+    }
+    public void setEntries(List<T> entries) {
+        entryList = entries;
+    }
+    public List<T> entryList() {
+        System.out.println("return entryList");
+        return entryList;
     }
 }
