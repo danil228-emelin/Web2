@@ -23,6 +23,7 @@ public class AreaCheckServlet extends HttpServlet {
         var x = Double.parseDouble(request.getHeader("x"));
         var y = Double.parseDouble(request.getHeader("y"));
         var r = Double.parseDouble(request.getHeader("r"));
+        var requestTime = request.getHeader("currentTime");
         var result = isInRange(x, y, r);
         var currentTime = new SimpleDateFormat("HH::mm::ss").format(new Date());
         EntriesBean<Entry> entries = (EntriesBean) request.getSession().getAttribute("entries");
@@ -32,7 +33,16 @@ public class AreaCheckServlet extends HttpServlet {
         }
         response.setCharacterEncoding("UTF-8");
         String executionTime = String.valueOf((System.nanoTime() - startTime));
-        entries.add(Optional.of(new Entry(x, y, r, currentTime, executionTime, result)));
+        entries.add(Optional.of(Entry
+                .builder()
+                .x(x)
+                .y(y)
+                .r(r)
+                .requestTime(requestTime)
+                .responseTime(currentTime)
+                .inRange(result)
+                .executionTime(executionTime)
+                .build()));
         getServletContext().getRequestDispatcher("/template.jsp").forward(request, response);
     }
 

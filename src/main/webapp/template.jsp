@@ -1,3 +1,4 @@
+<%@ page import="itmo.project.bean.Entry" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:useBean id="entries" class="itmo.project.bean.EntriesBean" scope="session"/>
@@ -167,17 +168,23 @@
                     <th>Request Time</th>
                     <th>Response Time</th>
                     <th>In range</th>
+                    <th>Execution time</th>
                 </tr>
-                <c:forEach var="entry" items="${entries.entryList}">
-                    <tr class="row_table">
-                        <td>${entry.x}</td>
-                        <td>${entry.y}</td>
-                        <td>${entry.r}</td>
-                        <td>${entry.currentTime}</td>
-                        <td>${entry.responseTime} ns</td>
-                        <td>${entry.inRange}</td>
-                    </tr>
-                </c:forEach>
+                <%
+                    for (int i = 0; i < entries.entryList().size(); i++) {
+                        Entry row = (Entry) entries.entryList().get(i);
+                %>
+                <tr>
+                    <td><%= row.getX()%></td>
+                    <td><%= row.getY()%></td>
+                    <td><%= row.getR()%></td>
+                    <td><%= row.getRequestTime()%></td>
+                    <td><%= row.getResponseTime()%></td>
+                    <td><%= row.isInRange()%>
+                    <td><%= row.getExecutionTime()%>
+                    </td>
+                </tr>
+                <% }%>
             </table>
         </div>
     </div>
