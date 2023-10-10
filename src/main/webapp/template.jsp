@@ -101,60 +101,7 @@
             <button type="button" id="clearing" onclick="removeAllElements()">clear</button>
         </div>
         <div class="photo right_side">
-            <svg class="field" width="500" height="500">
-                <!-- Фигуры -->
-                <polygon
-                        points="250,150 450,250  250,250"
-                        fill="cyan"
-                        stroke="cyan"
-                ></polygon>
-                <polygon
-                        points="250,250 450,250 450,350  250,350"
-                        fill="cyan"
-                        stroke="cyan"
-                ></polygon>
-                <path
-                        d="M 250,250  L 150,250 A 120,150 0 0 ,1  250,150 Z"
-                        fill="cyan"
-                        stroke="cyan"
-                ></path>
-                <!-- Линии и отметки -->
-                <line stroke="black" x1="0" x2="500" y1="250" y2="250"></line>
-                <line stroke="black" x1="250" x2="250" y1="0" y2="500"></line>
-
-                <line stroke="black" x1="50" x2="50" y1="246" y2="254"></line>
-                <line stroke="black" x1="150" x2="150" y1="246" y2="254"></line>
-                <line stroke="black" x1="350" x2="350" y1="246" y2="254"></line>
-                <line stroke="black" x1="450" x2="450" y1="246" y2="254"></line>
-
-                <line stroke="black" x1="246" x2="254" y1="50" y2="50"></line>
-                <line stroke="black" x1="246" x2="254" y1="150" y2="150"></line>
-                <line stroke="black" x1="246" x2="254" y1="350" y2="350"></line>
-                <line stroke="black" x1="246" x2="254" y1="450" y2="450"></line>
-
-                <!-- Стрелки -->
-                <polygon
-                        points="250,0 254,25 246,25"
-                        fill="black"
-                        stroke="black"
-                ></polygon>
-                <polygon
-                        points="500,250 475,254 475,246"
-                        fill="black"
-                        stroke="black"
-                ></polygon>
-
-                <!-- Значение отметок -->
-                <text x="40" y="240" fill="black">-R</text>
-                <text x="135" y="240" fill="black">-R/2</text>
-                <text x="340" y="240" fill="black">R/2</text>
-                <text x="445" y="240" fill="black">R</text>
-
-                <text x="260" y="55" fill="black">R</text>
-                <text x="260" y="155" fill="black">R/2</text>
-                <text x="260" y="355" fill="black">-R/2</text>
-                <text x="260" y="455" fill="black">-R</text>
-            </svg>
+            <canvas id="graph" width="250" height="250"></canvas>
         </div>
     </div>
 
@@ -191,5 +138,7 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/graphElement.js"></script>
+<script src="js/drawing.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>

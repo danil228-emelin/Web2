@@ -83,14 +83,16 @@ SEND_BUTTON.addEventListener("click", async () => {
             'x': x,
             'y': y,
             'r': r,
-            'currentTime':currentTime
+            'currentTime': currentTime
         }
     })
         .then(function () {
-           window.location.reload()
+            window.location.reload()
         })
 });
 
 function removeAllElements() {
     $("#results").find("tr:gt(0)").remove();
 }
+
+
