@@ -2,6 +2,7 @@ package itmo.project.servlet;
 
 import itmo.project.bean.EntriesBean;
 import itmo.project.bean.Entry;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,10 +15,12 @@ import java.util.Date;
 import java.util.Optional;
 
 @WebServlet("/checkServlet")
+@Slf4j
 public class AreaCheckServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("In AreaCheckServlet get request");
+
+        log.info(" Check x,y,r ");
 
         final long startTime = System.nanoTime();
         var x = Double.parseDouble(request.getHeader("x"));
@@ -27,10 +30,6 @@ public class AreaCheckServlet extends HttpServlet {
         var result = isInRange(x, y, r);
         var currentTime = new SimpleDateFormat("HH::mm::ss").format(new Date());
         EntriesBean<Entry> entries = (EntriesBean) request.getSession().getAttribute("entries");
-        if (entries == null) {
-            entries = new EntriesBean<>();
-            request.getSession().setAttribute("entries", entries);
-        }
         response.setCharacterEncoding("UTF-8");
         String executionTime = String.valueOf((System.nanoTime() - startTime));
         entries.add(Optional.of(Entry
@@ -43,6 +42,7 @@ public class AreaCheckServlet extends HttpServlet {
                 .inRange(result)
                 .executionTime(executionTime)
                 .build()));
+        log.info("Forward response to template.jsp");
         getServletContext().getRequestDispatcher("/template.jsp").forward(request, response);
     }
 
