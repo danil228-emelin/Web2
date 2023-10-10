@@ -94,14 +94,14 @@
                     <button type="button" class="b" value="1.5">1.5</button>
                     <button type="button" class="b" value="2">2</button>
                     <button type="button" class="b" value="2.5">2.5</button>
-                    <button type="button" class="b" value="4">3</button>
+                    <button type="button" class="b" value="3">3</button>
                 </div>
             </div>
             <button type="button" id="button-send" name="send">send</button>
             <button type="button" id="clearing" onclick="removeAllElements()">clear</button>
         </div>
         <div class="photo right_side">
-            <canvas id="graph" width="250" height="250"></canvas>
+            <canvas id="graph" width="300" height="300"></canvas>
         </div>
     </div>
 

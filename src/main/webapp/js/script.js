@@ -8,7 +8,7 @@ const LEFT_BORDER = -5;
 const RIGHT_BORDER = 3;
 
 let table = document.querySelector("table[id=results]");
-let r = null;
+ r = null;
 let x = null;
 let y = null;
 const MAX_ROWS_SAVED = 50;
@@ -93,6 +93,6 @@ SEND_BUTTON.addEventListener("click", async () => {
 
 function removeAllElements() {
     $("#results").find("tr:gt(0)").remove();
+    axios.delete('/web-jsp');
 }
-
 

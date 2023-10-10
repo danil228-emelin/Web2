@@ -17,6 +17,7 @@ import java.util.Optional;
 @WebServlet("/checkServlet")
 @Slf4j
 public class AreaCheckServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
@@ -28,6 +29,7 @@ public class AreaCheckServlet extends HttpServlet {
         var r = Double.parseDouble(request.getHeader("r"));
         var requestTime = request.getHeader("currentTime");
         var result = isInRange(x, y, r);
+        response.addHeader("inRange",result?"1":"0");
         var currentTime = new SimpleDateFormat("HH::mm::ss").format(new Date());
         EntriesBean<Entry> entries = (EntriesBean) request.getSession().getAttribute("entries");
         response.setCharacterEncoding("UTF-8");

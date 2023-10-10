@@ -16,9 +16,9 @@ import java.io.IOException;
 @Slf4j
 public class ControllerServlet extends HttpServlet {
     private final String ERROR_DIGIT = "Value must be digit .Has ";
-    private final String ERROR_X = "X must be in range [-3;5]";
-    private final String ERROR_Y = "Y must be in range [-5;3]";
-    private final String ERROR_R = "R must be a value from set {1;1.5;2;2.5;3}";
+    private final String ERROR_X = "X must be in range [-3;5].Has ";
+    private final String ERROR_Y = "Y must be in range [-5;3].Has ";
+    private final String ERROR_R = "R must be a value from set {1;1.5;2;2.5;3}.Has ";
     private final String ERROR_TIME = "REQUEST TIME IS NULL";
 
     private void initialization(HttpServletRequest request) {
@@ -46,18 +46,12 @@ public class ControllerServlet extends HttpServlet {
         }
         try {
             var valueX = Double.parseDouble(x);
-            if (valueX < -3 || valueX > 5) {
-                throw new NumberException(ERROR_X);
-            }
+
             var valueY = Double.parseDouble(y);
-            if (valueY < -5 || valueY > 3) {
-                throw new NumberException(ERROR_Y);
-            }
+
             var valueR = Double.parseDouble(r);
 
-            if (valueR < 1 || valueR > 3 || valueR * 10 % 5 != 0) {
-                throw new NumberException(ERROR_R);
-            }
+
             if (requestTime == null) {
                 throw new NumberException(ERROR_TIME);
             }
@@ -76,5 +70,13 @@ public class ControllerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         doGet(request, response);
+    }
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        EntriesBean<Entry> entries = (EntriesBean) request.getSession().getAttribute("entries");
+        if (entries != null) {
+            entries.entryList().clear();
+            log.info("Clear bean");
+        }
     }
 }
