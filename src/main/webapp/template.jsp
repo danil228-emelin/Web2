@@ -94,7 +94,7 @@
                     <button type="button" class="b" value="1.5">1.5</button>
                     <button type="button" class="b" value="2">2</button>
                     <button type="button" class="b" value="2.5">2.5</button>
-                    <button type="button" class="b" value="4">4</button>
+                    <button type="button" class="b" value="4">3</button>
                 </div>
             </div>
             <button type="button" id="button-send" name="send">send</button>
@@ -104,17 +104,17 @@
             <svg class="field" width="500" height="500">
                 <!-- Фигуры -->
                 <polygon
-                        points="250,250 352,250 250,350"
+                        points="250,150 450,250  250,250"
                         fill="cyan"
                         stroke="cyan"
                 ></polygon>
                 <polygon
-                        points="250,250 150,250 150,450 248,450"
+                        points="250,250 450,250 450,350  250,350"
                         fill="cyan"
                         stroke="cyan"
                 ></polygon>
                 <path
-                        d="M 250,250  L 50,250 A 180,180 0 0 ,1  250,50 Z"
+                        d="M 250,250  L 150,250 A 120,150 0 0 ,1  250,150 Z"
                         fill="cyan"
                         stroke="cyan"
                 ></path>
