@@ -78,7 +78,7 @@ SEND_BUTTON.addEventListener("click", async () => {
     });
 
 
-  let res=  await axios.get('http://localhost:8080/web-1.0', {
+  let res=  await axios.get('http://localhost:9315/web-1.0/', {
         headers: {
             'Access-Control-Allow-Origin':'*',
             'x': x,
@@ -96,7 +96,7 @@ SEND_BUTTON.addEventListener("click", async () => {
 
 function removeAllElements() {
     $("#results").find("tr:gt(0)").remove();
-    axios.delete('http://localhost:8080/web-1.0',{ headers: {
+    axios.delete('http://localhost:9315/web-1.0/',{ headers: {
             'Access-Control-Allow-Origin':'*'
         }
     });
