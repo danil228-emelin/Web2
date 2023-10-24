@@ -37,8 +37,9 @@ function drawPoint(context, x, y, color, size) {
         minute: "numeric",
         second: "numeric",
     });
-    axios.get('/web-jsp', {
+    axios.get('http://localhost:9315/web-1.0/', {
         headers: {
+            'Access-Control-Allow-Origin':'*',
             'x': requestX,
             'y': requestY,
             'r': r*pixelValue,

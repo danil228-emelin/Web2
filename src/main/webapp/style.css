@@ -1,7 +1,7 @@
 html,
 body {
     min-height: 100vh;
-    background-image: linear-gradient(to bottom right, #c57525, #8f388f);
+    background-image: linear-gradient(to bottom right, #c5ac25, #8f388f);
 }
 
 *{
@@ -92,7 +92,7 @@ button {
 
 button::before {
     content: "";
-    background: linear-gradient(45deg, #06a7bd, #b94d10, #242b46, #326b19);
+    background: linear-gradient(45deg, #ff1500, #592828, #242b46, #326b19);
     position: absolute;
     top: -2px;
     left: -2px;
