@@ -78,21 +78,27 @@ SEND_BUTTON.addEventListener("click", async () => {
     });
 
 
-    axios.get('http://localhost:8080/web-1.0', {
+  let res=  await axios.get('http://localhost:8080/web-1.0', {
         headers: {
+            'Access-Control-Allow-Origin':'*',
             'x': x,
             'y': y,
-            'r': r,
+            //'r': r,
             'currentTime': currentTime
         }
-    })
-        .then(function () {
-            window.location.reload()
-        })
+    }).catch((error)=>{
+        console.log(error.response.data);
+      document.body.innerHTML=error.response.data;
+
+  });
+
 });
 
 function removeAllElements() {
     $("#results").find("tr:gt(0)").remove();
-    axios.delete('http://localhost:8080/web-1.0');
+    axios.delete('http://localhost:8080/web-1.0',{ headers: {
+            'Access-Control-Allow-Origin':'*'
+        }
+    });
 }
 

@@ -10,33 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c12cd89-b5cc-48bd-80b2-5701c7c2cff6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/AreaCheckServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/ControllerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/bean/EntriesBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/bean/Entry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/exception/NumberException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/drawing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/graphElement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/exception/TimeFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/filter/FilterInitialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/niga.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/niga.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/itmo/project/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itmo/project/ControllerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/drawing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/drawing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,24 +50,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/IntelliJ IDEA 2022.2.3/Web2/src/main/java/itmo/project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ IDEA 2022.2.3/Web2/src/main/webapp/WEB-INF&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IntelliJ IDEA 2022.2.3\Web2\src\main\webapp\WEB-INF" />
       <recent name="D:\IntelliJ IDEA 2022.2.3\Web2\src\main\java\itmo\project" />
+      <recent name="D:\IntelliJ IDEA 2022.2.3\Web2\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IntelliJ IDEA 2022.2.3\Web2\src\main\webapp\error" />
       <recent name="D:\IntelliJ IDEA 2022.2.3\Web2\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -164,10 +164,47 @@
       <updated>1697184414200</updated>
       <workItem from="1697184415298" duration="38000" />
       <workItem from="1697184466000" duration="2709000" />
+      <workItem from="1697187197850" duration="2874000" />
+      <workItem from="1697190717408" duration="135000" />
+      <workItem from="1697895526411" duration="669000" />
+      <workItem from="1697898330943" duration="69000" />
+      <workItem from="1697903369744" duration="14000" />
+      <workItem from="1697976595720" duration="6000" />
+      <workItem from="1697980679313" duration="888000" />
+      <workItem from="1697985421583" duration="356000" />
+      <workItem from="1698053441830" duration="7000" />
+      <workItem from="1698054484225" duration="727000" />
+      <workItem from="1698132440124" duration="819000" />
+      <workItem from="1698135465288" duration="1163000" />
+      <workItem from="1698137280119" duration="2016000" />
+      <workItem from="1698148993130" duration="11125000" />
+      <workItem from="1698167740362" duration="664000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/error/error.jsp</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

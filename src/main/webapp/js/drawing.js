@@ -39,6 +39,7 @@ function drawPoint(context, x, y, color, size) {
     });
     axios.get('http://localhost:8080/web-1.0', {
         headers: {
+            'Access-Control-Allow-Origin':'*',
             'x': requestX,
             'y': requestY,
             'r': r*pixelValue,
