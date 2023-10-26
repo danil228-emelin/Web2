@@ -16,6 +16,7 @@
 </head>
 <body>
 <div class="header">
+    <span>A</span>
     <span>Danil Emelin</span>
     <span>Group-P3208</span>
     <span>Variant-1804</span>
@@ -107,7 +108,7 @@
 
     <div class="ass">
         <div class="table_result">
-            <table id="results">
+            <table id="results" style="max-height: 1px ; overflow: auto;">
                 <tr>
                     <th>X</th>
                     <th>Y</th>

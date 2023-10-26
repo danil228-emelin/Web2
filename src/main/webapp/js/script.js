@@ -83,7 +83,7 @@ SEND_BUTTON.addEventListener("click", async () => {
             'Access-Control-Allow-Origin':'*',
             'x': x,
             'y': y,
-            //'r': r,
+            'r': r,
             'currentTime': currentTime
         }
     }).catch((error)=>{

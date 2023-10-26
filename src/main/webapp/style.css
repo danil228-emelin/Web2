@@ -153,10 +153,7 @@ td {
     margin: 0;
 }
 
-.table-result {
-    max-height: 300px;
-    overflow: auto;
-}
+
 
 table,
 th,
