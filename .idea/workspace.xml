@@ -10,16 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c12cd89-b5cc-48bd-80b2-5701c7c2cff6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/exception/TimeFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itmo/project/filter/FilterInitialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/niga.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/niga.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/itmo/project/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itmo/project/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/drawing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/drawing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/itmo/project/AreaCheckServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/itmo/project/ControllerServlet.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +49,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ IDEA 2022.2.3/Web2/src/main/webapp/WEB-INF&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ IDEA 2022.2.3/Web2Tomcat&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -179,6 +172,10 @@
       <workItem from="1698137280119" duration="2016000" />
       <workItem from="1698148993130" duration="11125000" />
       <workItem from="1698167740362" duration="664000" />
+      <workItem from="1698172563166" duration="29000" />
+      <workItem from="1698308524690" duration="30000" />
+      <workItem from="1698312207900" duration="6000" />
+      <workItem from="1698312325159" duration="67000" />
     </task>
     <servers />
   </component>
